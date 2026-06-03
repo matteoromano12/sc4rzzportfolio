@@ -4,7 +4,7 @@ const text = document.querySelector('.slide-text');
 const schermo = document.querySelector('.schermo');
 const homescreen = document.querySelector('.homescreen');
 const foto = document.querySelector('#foto');
-const liveleak = document.querySelector('#liveleak');
+const liveleak = document.querySelector('#liveleak'); 
 const phone = document.querySelector('#phone');
 
 let dragging = false;
