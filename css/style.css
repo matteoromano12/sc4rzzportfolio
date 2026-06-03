@@ -108,7 +108,7 @@ body {
   width: 634px;
   height: 951px;
   overflow: hidden;
-  background-image: url('/img/foto.jpeg');
+  background-image: url('../img/foto.jpeg');
   background-size: cover;
   background-position: center;
 }
@@ -116,8 +116,7 @@ body {
 @media (max-width: 700px) {
   .iphone {
     width: 100vw;
-    height: auto;
-    aspect-ratio: 634 / 951;
+    height: 100vh;
   }
 }
 
@@ -350,7 +349,7 @@ body {
   z-index: 200;
   display: flex;
   flex-direction: column;
-  background-image: url("/img/liveleakbackground.jpeg");
+  background-image: url("../img/liveleakbackground.jpeg");
 }
 
 .hotline {
@@ -362,7 +361,7 @@ body {
   z-index: 200;
   display: flex;
   flex-direction: column;
-  background-image: url("/img/hotline.jpeg");
+  background-image: url("../img/hotline.jpeg");
   background-position: top center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
