@@ -174,3 +174,49 @@ viewerBack.addEventListener('click', () => {
   viewer.style.display = 'none';
   document.querySelector('.gallery').style.display = 'flex';
 });
+
+thumb.addEventListener('touchstart', (e) => {
+  dragging = true;
+  maxSlide = getMaxSlide();
+  startX = e.touches[0].clientX - currentX;
+  thumb.style.cursor = 'grabbing';
+  e.preventDefault();
+}, { passive: false });
+
+document.addEventListener('touchmove', (e) => {
+  if (!dragging) return;
+  let x = e.touches[0].clientX - startX;
+  x = Math.max(0, Math.min(x, maxSlide));
+  currentX = x;
+  thumb.style.left = x + 'px';
+  text.style.opacity = 1 - (x / maxSlide);
+}, { passive: false });
+
+document.addEventListener('touchend', () => {
+  if (!dragging) return;
+  dragging = false;
+
+  const progress = currentX / maxSlide;
+
+  if (progress >= 0.95) {
+    const unlocktop = document.querySelector('.unlocktop');
+    const unlockbottom = document.querySelector('.unlockbottom');
+    const spazio = document.querySelector('.spazio');
+
+    unlocktop.style.transform = 'translateY(-100%)';
+    unlocktop.style.opacity = '0';
+    unlockbottom.style.transform = 'translateY(100%)';
+    unlockbottom.style.opacity = '0';
+    spazio.style.opacity = '0';
+
+    setTimeout(() => {
+      unlocktop.style.display = 'none';
+      unlockbottom.style.display = 'none';
+      spazio.style.display = 'none';
+      homescreen.style.display = 'flex';
+
+      document.querySelector('.lucchetto').style.display = 'none';
+      document.querySelector('.top-center').style.display = 'block';
+    }, 400);
+  }
+});
