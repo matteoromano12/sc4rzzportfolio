@@ -359,3 +359,15 @@ body {
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
+
+@media (max-width: 700px) {
+  .iphone {
+    width: 100vw;
+    height: 100dvh;
+  }
+
+  .dock-icon img {
+      width: 18vw !important;
+      height: 18vw !important;
+  }
+}
