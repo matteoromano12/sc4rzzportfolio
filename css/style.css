@@ -115,9 +115,34 @@ body {
 
 @media (max-width: 700px) {
   .iphone {
+    --s: calc(100vw / 634);
     width: 100vw;
-    height: 100dvh;
+    height: calc(951px * (100vw / 634));
   }
+
+  .top { height: calc(40px * var(--s)); padding: 0 calc(15px * var(--s)); }
+  .lock { width: calc(26px * var(--s)); height: calc(26px * var(--s)); }
+  .top svg { width: calc(26px * var(--s)); height: calc(26px * var(--s)); }
+  .service, .batteria { font-size: calc(13px * var(--s)); gap: calc(4px * var(--s)); }
+  .unlocktop { height: calc(150px * var(--s)); }
+  .orario { font-size: calc(96px * var(--s)); }
+  .data { font-size: calc(18px * var(--s)); }
+  .spazio { height: calc(621px * var(--s)); }
+  .unlockbottom { height: calc(140px * var(--s)); }
+  .slider-track { height: calc(58px * var(--s)); border-radius: calc(10px * var(--s)); }
+  .slider-thumb { width: calc(79px * var(--s)); height: calc(58px * var(--s)); border-radius: calc(10px * var(--s)); }
+  .arrowslider { width: calc(48px * var(--s)); height: calc(38px * var(--s)); }
+  .slide-text { font-size: calc(20px * var(--s)); letter-spacing: calc(2px * var(--s)); }
+  .homescreen { top: calc(40px * var(--s)); height: calc(100% - 40px * var(--s)); }
+  .dock { height: calc(150px * var(--s)); padding: calc(10px * var(--s)) calc(10px * var(--s)) 0; }
+  .dock::after { height: calc(25px * var(--s)); }
+  .dock-icon img { width: calc(120px * var(--s)); height: calc(120px * var(--s)); border-radius: calc(14px * var(--s)); }
+  .dock-icon span { font-size: calc(15px * var(--s)); }
+  .dock .dock-icon img { transform: translateY(calc(-10px * var(--s))); }
+  .app { gap: calc(20px * var(--s)); padding: calc(20px * var(--s)) calc(10px * var(--s)); }
+  .gallery, .liveleak, .hotline { top: calc(40px * var(--s)); height: calc(100% - 40px * var(--s)); }
+  .gallery-top { height: calc(40px * var(--s)); padding: 0 calc(15px * var(--s)); }
+  .gallery-back, .liveleak-back, .hotline-back { font-size: calc(18px * var(--s)); }
 }
 
 .top {
