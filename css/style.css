@@ -343,6 +343,9 @@ body {
   display: flex;
   flex-direction: column;
   background-image: url("../img/liveleakbackground.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .hotline {
@@ -370,4 +373,9 @@ body {
       width: 18vw !important;
       height: 18vw !important;
   }
+
+  .dock .dock-icon img {
+    transform: translateY(-4px);
+  }
+
 }
